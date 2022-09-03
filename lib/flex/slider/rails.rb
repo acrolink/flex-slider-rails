@@ -6,7 +6,7 @@ module Flex
       class Engine < ::Rails::Engine
         initializer :append_dependent_assets_path, :group => :all do |app|
           app.config.assets.paths += %w( fonts )
-          app.config.assets.digest = false
+          
           app.config.assets.precompile += %w( flexslider.css.scss )
           app.config.assets.precompile += %w( jquery.flexslider.js )
 
